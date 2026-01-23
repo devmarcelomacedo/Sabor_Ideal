@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabor Ideal - Gourmet</title>
-    <link rel="icon" type="image/png" href="img/favicon.png">
-    <link rel="apple-touch-icon" href="img/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -17,10 +15,7 @@
             --green: #25d366;
         }
 
-        * {
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+        * { box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 
         body {
             background: var(--light);
@@ -64,9 +59,7 @@
             padding: 15px;
         }
 
-        .hidden {
-            display: none !important;
-        }
+        .hidden { display: none !important; }
 
         .menu-grid {
             display: grid;
@@ -81,8 +74,6 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
             cursor: pointer;
             border: 1px solid #eee;
-            display: flex;
-            flex-direction: column;
         }
 
         .product-img {
@@ -92,33 +83,15 @@
             background-position: center;
         }
 
-        .product-info {
-            padding: 10px;
-            flex-grow: 1;
-        }
-
-        .product-info h4 {
-            margin: 0;
-            font-size: 13px;
-        }
-
-        .product-info strong {
-            color: var(--primary);
-            font-size: 14px;
-            display: block;
-            margin-top: 5px;
-        }
+        .product-info { padding: 10px; }
+        .product-info h4 { margin: 0; font-size: 13px; }
+        .product-info strong { color: var(--primary); font-size: 14px; display: block; margin-top: 5px; }
 
         #modal-qty {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
+            display: flex; justify-content: center; align-items: flex-end;
             z-index: 9999;
         }
 
@@ -150,25 +123,17 @@
             padding-left: 8px;
         }
 
-        .checkbox-list {
-            display: grid;
-            grid-template-columns: 1fr;
-        }
-
         .checkbox-item {
             display: flex;
             align-items: center;
-            padding: 12px 0;
+            padding: 10px 0;
             border-bottom: 1px solid #f5f5f5;
             font-size: 14px;
             cursor: pointer;
-            color: #555;
         }
 
         .checkbox-item input {
-            width: 20px;
-            height: 20px;
-            margin-right: 12px;
+            width: 18px; height: 18px; margin-right: 12px;
             accent-color: var(--primary);
         }
 
@@ -183,48 +148,24 @@
             text-transform: uppercase;
         }
 
-        .btn-main {
-            background: var(--primary);
-            color: white;
-        }
+        .btn-main { background: var(--primary); color: white; }
+        .btn-whatsapp { background: var(--green); color: white; }
 
-        .btn-whatsapp {
-            background: var(--green);
-            color: white;
-            font-size: 16px;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-        }
-
-        textarea,
-        input,
-        select {
-            width: 100%;
-            padding: 12px;
-            border-radius: 10px;
-            border: 1px solid #ddd;
-            margin-top: 5px;
-            font-family: inherit;
+        textarea, input, select {
+            width: 100%; padding: 12px; border-radius: 10px;
+            border: 1px solid #ddd; margin-top: 5px;
         }
 
         .resumo-item {
-            background: #fff;
-            padding: 15px;
-            border-radius: 12px;
-            margin-bottom: 15px;
-            border-left: 5px solid var(--primary);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            background: #fff; padding: 15px; border-radius: 12px;
+            margin-bottom: 15px; border-left: 5px solid var(--primary);
             position: relative;
         }
 
         .btn-remove {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            background: none;
-            border: none;
-            color: #ff4d4d;
-            font-size: 20px;
-            cursor: pointer;
+            position: absolute; top: 12px; right: 12px;
+            background: none; border: none; color: #ff4d4d;
+            font-size: 20px; cursor: pointer;
         }
     </style>
 </head>
@@ -245,41 +186,30 @@
     <section id="tela-inicio" class="screen">
         <div class="menu-grid">
             <div class="product-card" onclick="irPara('tela-lanches')">
-                <div class="product-img"
-                    style="background-image: url('https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400')">
-                </div>
-                <div class="product-info">
-                    <h4>Self-Service e Marmitas</h4>
-                </div>
+                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400')"></div>
+                <div class="product-info"><h4>Self-Service e Marmitas</h4></div>
             </div>
             <div class="product-card" onclick="irPara('tela-lanches')">
-                <div class="product-img"
-                    style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400')">
-                </div>
-                <div class="product-info">
-                    <h4>Lanches e Bebidas</h4>
-                </div>
+                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400')"></div>
+                <div class="product-info"><h4>Lanches e Bebidas</h4></div>
             </div>
         </div>
     </section>
 
     <section id="tela-lanches" class="screen hidden">
-        <button class="btn" style="background:#ddd; margin-bottom:15px; padding: 10px; font-size: 11px;"
-            onclick="irPara('tela-inicio')">← CATEGORIAS</button>
+        <button class="btn" style="background:#ddd; margin-bottom:15px; padding: 10px; font-size: 11px;" onclick="irPara('tela-inicio')">← CATEGORIAS</button>
         <div id="grid-produtos" class="menu-grid"></div>
-        <button class="btn btn-main" style="position: sticky; bottom: 10px;" onclick="irPara('tela-carrinho')"
-            id="btn-resumo">VER CARRINHO (0)</button>
+        <button class="btn btn-main" style="position: sticky; bottom: 10px;" onclick="irPara('tela-carrinho')" id="btn-resumo">VER CARRINHO (0)</button>
     </section>
 
     <section id="tela-carrinho" class="screen hidden">
-        <h3 style="margin-top:0">Meu Pedido</h3>
+        <h3>Meu Pedido</h3>
         <div id="lista-carrinho"></div>
 
-        <div
-            style="background: #fff; padding: 15px; border-radius: 12px; margin-top: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-            <strong style="font-size: 13px; color: var(--dark);">DADOS PARA ENTREGA:</strong>
+        <div style="background: #fff; padding: 15px; border-radius: 12px; margin-top: 15px;">
+            <strong>DADOS PARA ENTREGA:</strong>
             <input type="text" id="cliente-nome" placeholder="Seu nome completo">
-            <input type="text" id="cliente-local" placeholder="Digite seu endereço completo">
+            <input type="text" id="cliente-local" placeholder="Endereço (Rua, Número, Bairro)">
             <select id="pagamento">
                 <option value="Pix">Pix</option>
                 <option value="Cartão">Cartão</option>
@@ -291,8 +221,7 @@
             <h2 id="total-valor" style="color: var(--primary); margin:0;">Total: R$ 0,00</h2>
         </div>
         <button class="btn btn-whatsapp" onclick="enviarWhatsApp()">🚀 ENVIAR PEDIDO NO WHATSAPP</button>
-        <button class="btn" style="background:none; color: #999; font-size: 12px;"
-            onclick="irPara('tela-lanches')">ADICIONAR MAIS ITENS</button>
+        <button class="btn" style="background:none; color: #999; font-size: 12px;" onclick="irPara('tela-lanches')">ADICIONAR MAIS ITENS</button>
     </section>
 
     <div id="modal-qty" class="hidden">
@@ -302,20 +231,17 @@
             <div id="controle-qtd" class="options-group">
                 <strong>QUANTIDADE:</strong>
                 <div style="display:flex; justify-content:center; gap:25px; align-items:center;">
-                    <button onclick="alterarQtd(-1)"
-                        style="width:40px;height:40px;border-radius:50%;border:1px solid #ddd; background:#f8f8f8;">-</button>
+                    <button onclick="alterarQtd(-1)" style="width:40px;height:40px;border-radius:50%; border:1px solid #ddd;">-</button>
                     <span id="qtd-display" style="font-weight:bold; font-size: 20px;">1</span>
-                    <button onclick="alterarQtd(1)"
-                        style="width:40px;height:40px;border-radius:50%;border:1px solid #ddd; background:#f8f8f8;">+</button>
+                    <button onclick="alterarQtd(1)" style="width:40px;height:40px;border-radius:50%; border:1px solid #ddd;">+</button>
                 </div>
             </div>
             <div id="controle-peso" class="options-group hidden">
-                <strong>Informe o Peso (Kg):</strong>
+                <strong>Peso (Kg):</strong>
                 <input type="number" id="input-peso" step="0.01" oninput="calcularPrecoPeso()">
-                <div style="text-align: center; font-size: 18px; color: var(--primary); font-weight: bold; margin-top: 10px;"
-                    id="label-preco-peso">R$ 0,00</div>
+                <div id="label-preco-peso" style="text-align: center; font-size: 18px; color: var(--primary); font-weight: bold; margin-top: 10px;">R$ 0,00</div>
             </div>
-            <textarea id="modal-obs" placeholder="Alguma observação?"></textarea>
+            <textarea id="modal-obs" placeholder="Alguma observação? Ex: Sem cebola..."></textarea>
             <button class="btn btn-main" onclick="confirmarNoCarrinho()">ADICIONAR AO CARRINHO</button>
             <button class="btn" style="background:none; color: #999;" onclick="fecharModal()">CANCELAR</button>
         </div>
@@ -323,10 +249,10 @@
 
     <script>
         const produtos = [
-            { id: 1, nome: "Marmita Gourmet", precoBase: 20.00, img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400", tipo: "marmita" },
-            { id: 7, nome: "Self-Service (Kg)", preco: 49.99, img: "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?w=400", tipo: "peso" },
-            { id: 2, nome: "X-Burger Especial", preco: 22.00, img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400", tipo: "unidade" },
-            { id: 5, nome: "Coca-Cola Lata", preco: 7.50, img: "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=400", tipo: "unidade" }
+            { id: 1, nome: "Marmita Gourmet", precoBase: 20.00, tipo: "marmita", img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400" },
+            { id: 7, nome: "Self-Service (Kg)", preco: 49.99, tipo: "peso", img: "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?w=400" },
+            { id: 2, nome: "X-Burger Especial", preco: 22.00, tipo: "unidade", img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400" },
+            { id: 5, nome: "Coca-Cola Lata", preco: 7.50, tipo: "unidade", img: "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=400" }
         ];
 
         let carrinho = [];
@@ -338,9 +264,9 @@
             const grid = document.getElementById('grid-produtos');
             produtos.forEach(p => {
                 grid.innerHTML += `<div class="product-card" onclick="abrirModal(${p.id})">
-                <div class="product-img" style="background-image: url('${p.img}')"></div>
-                <div class="product-info"><h4>${p.nome}</h4><strong>${p.precoBase ? 'A partir de R$ ' + p.precoBase.toFixed(2) : 'R$ ' + p.preco.toFixed(2)}</strong></div>
-            </div>`;
+                    <div class="product-img" style="background-image: url('${p.img}')"></div>
+                    <div class="product-info"><h4>${p.nome}</h4><strong>${p.precoBase ? 'A partir de R$ '+p.precoBase.toFixed(2) : 'R$ '+p.preco.toFixed(2)}</strong></div>
+                </div>`;
             });
         };
 
@@ -353,6 +279,7 @@
             const area = document.getElementById('area-customizacao');
             const ctrlQtd = document.getElementById('controle-qtd');
             const ctrlPeso = document.getElementById('controle-peso');
+            
             area.innerHTML = ""; ctrlQtd.classList.remove('hidden'); ctrlPeso.classList.add('hidden');
 
             if (itemAtual.tipo === "peso") {
@@ -360,21 +287,27 @@
                 document.getElementById('input-peso').value = ""; document.getElementById('label-preco-peso').innerText = "R$ 0,00";
             } else if (itemAtual.tipo === "marmita") {
                 area.innerHTML = `
-                <div class="options-group"><strong>1. TAMANHO DA MARMITA:</strong><div class="checkbox-list">
+                <div class="options-group"><strong>1. TAMANHO:</strong>
                     <label class="checkbox-item"><input type="radio" name="tam" value="P" data-preco="20.00" checked> Marmita P - R$ 20,00</label>
                     <label class="checkbox-item"><input type="radio" name="tam" value="M" data-preco="24.00"> Marmita M - R$ 24,00</label>
                     <label class="checkbox-item"><input type="radio" name="tam" value="G" data-preco="28.00"> Marmita G - R$ 28,00</label>
-                </div></div>
-                <div class="options-group"><strong>2. PROTEÍNA (Pode marcar mais de uma):</strong><div class="checkbox-list">
+                </div>
+                <div class="options-group"><strong>2. BASE:</strong>
+                    <label class="checkbox-item"><input type="checkbox" name="base" value="Arroz"> Arroz</label>
+                    <label class="checkbox-item"><input type="checkbox" name="base" value="Feijão"> Feijão</label>
+                    <label class="checkbox-item"><input type="checkbox" name="base" value="Macarrão"> Macarrão</label>
+                </div>
+                <div class="options-group"><strong>3. PROTEÍNA:</strong>
                     <label class="checkbox-item"><input type="checkbox" name="prot" value="Peixe Grelhado"> Peixe Grelhado</label>
                     <label class="checkbox-item"><input type="checkbox" name="prot" value="Bolonhesa"> Bolonhesa</label>
                     <label class="checkbox-item"><input type="checkbox" name="prot" value="Frango Grelhado"> Frango Grelhado</label>
-                </div></div>
-                <div class="options-group"><strong>3. ACOMPANHAMENTOS:</strong><div class="checkbox-list">
+                </div>
+                <div class="options-group"><strong>4. ACOMPANHAMENTOS/SALADA:</strong>
                     <label class="checkbox-item"><input type="checkbox" name="acomp" value="Feijão Tropeiro"> Feijão Tropeiro</label>
                     <label class="checkbox-item"><input type="checkbox" name="acomp" value="Farofa"> Farofa</label>
-                    <label class="checkbox-item"><input type="checkbox" name="acomp" value="Purê de Batata"> Purê de Batata</label>
-                </div></div>`;
+                    <label class="checkbox-item"><input type="checkbox" name="acomp" value="Salada"> Salada</label>
+                    <label class="checkbox-item"><input type="checkbox" name="acomp" value="Purê"> Purê de Batata</label>
+                </div>`;
             }
             document.getElementById('modal-qty').classList.remove('hidden');
         }
@@ -388,18 +321,26 @@
         function confirmarNoCarrinho() {
             let precoFinal = itemAtual.preco || 0;
             let detalhes = "";
+
             if (itemAtual.tipo === "peso") {
                 const peso = document.getElementById('input-peso').value;
                 if (!peso || peso <= 0) return alert("Informe o peso!");
                 qtdAtual = parseFloat(peso); detalhes = `Peso: ${peso}kg`;
             } else if (itemAtual.tipo === "marmita") {
-                const tamRadio = document.querySelector('input[name="tam"]:checked');
-                const proteinas = Array.from(document.querySelectorAll('input[name="prot"]:checked')).map(el => el.value);
-                if (proteinas.length === 0) return alert("Escolha uma proteína!");
-                precoFinal = parseFloat(tamRadio.dataset.preco);
-                detalhes = `TAM: ${tamRadio.value} | PROT: ${proteinas.join(", ")}`;
+                const tam = document.querySelector('input[name="tam"]:checked');
+                const bases = Array.from(document.querySelectorAll('input[name="base"]:checked')).map(e => e.value);
+                const prots = Array.from(document.querySelectorAll('input[name="prot"]:checked')).map(e => e.value);
+                const acomps = Array.from(document.querySelectorAll('input[name="acomp"]:checked')).map(e => e.value);
+
+                if (prots.length === 0) return alert("Escolha a proteína!");
+                precoFinal = parseFloat(tam.dataset.preco);
+                detalhes = `TAM: ${tam.value}`;
+                if(bases.length) detalhes += ` | BASE: ${bases.join(", ")}`;
+                detalhes += ` | PROT: ${prots.join(", ")}`;
+                if(acomps.length) detalhes += ` | ACOMP: ${acomps.join(", ")}`;
             }
-            carrinho.push({ ...itemAtual, qtd: qtdAtual, total: itemAtual.tipo === "peso" ? precoCalculadoPeso : precoFinal * qtdAtual, detalhes: detalhes, obs: document.getElementById('modal-obs').value });
+
+            carrinho.push({ ...itemAtual, qtd: qtdAtual, total: itemAtual.tipo === "peso" ? precoCalculadoPeso : precoFinal * qtdAtual, detalhes, obs: document.getElementById('modal-obs').value });
             atualizarResumo(); fecharModal();
         }
 
@@ -408,9 +349,12 @@
             let totalGeral = 0; container.innerHTML = "";
             carrinho.forEach((i, index) => {
                 totalGeral += i.total;
-                container.innerHTML += `<div class="resumo-item"><button class="btn-remove" onclick="removerItem(${index})">×</button>
-                <strong>${i.tipo === 'peso' ? '' : i.qtd + 'x'} ${i.nome}</strong><br><small>${i.detalhes}</small>
-                <div style="text-align:right; font-weight:bold; color: var(--primary);">R$ ${i.total.toFixed(2)}</div></div>`;
+                container.innerHTML += `<div class="resumo-item">
+                    <button class="btn-remove" onclick="removerItem(${index})">×</button>
+                    <strong>${i.tipo === 'peso' ? '' : i.qtd + 'x'} ${i.nome}</strong><br>
+                    <small>${i.detalhes}</small>${i.obs ? `<br><small>Obs: ${i.obs}</small>` : ''}
+                    <div style="text-align:right; font-weight:bold; color: var(--primary);">R$ ${i.total.toFixed(2)}</div>
+                </div>`;
             });
             document.getElementById('total-valor').innerText = `Total: R$ ${totalGeral.toFixed(2)}`;
             document.getElementById('btn-resumo').innerText = `VER CARRINHO (${carrinho.length})`;
@@ -420,38 +364,34 @@
 
         function enviarWhatsApp() {
             const nome = document.getElementById('cliente-nome').value;
-            const endereco = document.getElementById('cliente-local').value;
-            const pag = document.getElementById('pagamento').value;
+            const local = document.getElementById('cliente-local').value;
             const enderecoLoja = "R. Vinte e Um de Abril, 185 - Centro, Campos dos Goytacazes - RJ";
+            
+            if (!nome || !local || !carrinho.length) return alert("Preencha os dados e adicione itens!");
 
-            if (!nome || !endereco || carrinho.length === 0) return alert("Preencha todos os dados!");
+            // Criando link do Maps
+            const googleMapsLink = `https://www.google.com/maps/dir/${encodeURIComponent(enderecoLoja)}/${encodeURIComponent(local)}`;
 
-            // Gera Link do Google Maps (Rota da Loja -> Cliente)
-            const googleMapsLink = `https://www.google.com/maps/dir/${encodeURIComponent(enderecoLoja)}/${encodeURIComponent(endereco)}`;
-
-            // Simulação de tempo estimado baseada em distância (9-15 min para perímetro urbano)
-            const tempoEstimado = "15 a 25 minutos (sujeito ao trânsito)";
-
-            let msg = `*NOVO PEDIDO - SABOR IDEAL GOURMET*\n------------------------------\n`;
-            msg += `👤 *Cliente:* ${nome}\n📍 *Endereço:* ${endereco}\n💳 *Pagamento:* ${pag}\n------------------------------\n\n`;
-
+            let msg = `*NOVO PEDIDO - SABOR IDEAL*\n--------------------------\n👤 *Cliente:* ${nome}\n📍 *Endereço:* ${local}\n💳 *Pagamento:* ${document.getElementById('pagamento').value}\n--------------------------\n\n`;
+            
             carrinho.forEach(i => {
-                msg += `✅ *${i.tipo === 'peso' ? '' : i.qtd + 'x'} ${i.nome}*\n   ${i.detalhes}\n   Subtotal: R$ ${i.total.toFixed(2)}\n\n`;
+                msg += `✅ *${i.tipo === 'peso' ? '' : i.qtd + 'x'} ${i.nome}*\n   ${i.detalhes}\n${i.obs ? `   Obs: ${i.obs}\n` : ''}   Subtotal: R$ ${i.total.toFixed(2)}\n\n`;
             });
-
-            msg += `------------------------------\n*TOTAL: ${document.getElementById('total-valor').innerText}*\n`;
-            msg += `⏱️ *Tempo Estimado:* ${tempoEstimado}\n`;
-            msg += `🗺️ *Ver Rota de Entrega:* ${googleMapsLink}`;
+            
+            msg += `--------------------------\n*TOTAL: ${document.getElementById('total-valor').innerText}*\n`;
+            msg += `🗺️ *Ver Rota Entrega:* ${googleMapsLink}`;
 
             window.open(`https://wa.me/5522988302170?text=${encodeURIComponent(msg)}`, '_blank');
 
-            // ZERAR PARA NOVO PEDIDO
-            carrinho = [];
-            document.getElementById('cliente-nome').value = "";
-            document.getElementById('cliente-local').value = "";
-            atualizarResumo();
-            alert("Pedido enviado com sucesso! O sistema foi zerado.");
-            irPara('tela-inicio');
+            // LIMPEZA APÓS O ENVIO
+            setTimeout(() => {
+                carrinho = [];
+                document.getElementById('cliente-nome').value = "";
+                document.getElementById('cliente-local').value = "";
+                atualizarResumo();
+                irPara('tela-inicio');
+                alert("Pedido enviado com sucesso!");
+            }, 1000);
         }
 
         function irPara(id) {
@@ -467,5 +407,4 @@
         function alterarQtd(v) { qtdAtual = Math.max(1, qtdAtual + v); document.getElementById('qtd-display').innerText = qtdAtual; }
     </script>
 </body>
-
 </html>
